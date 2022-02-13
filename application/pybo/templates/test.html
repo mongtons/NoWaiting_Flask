@@ -2,13 +2,15 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>
-            FLASK test
-        </title>
+            {% if title %}
+                <title>{{ title }}</title>
+            {% else %}
+                <title>Default</title>
+            {% endif %}
     </head>
     <body>
-        <p>
-            This page is test page
-        </p>
+        <h1>Hello Flask</h1>
+        <p>This page is for Flask Index page.</p>
+        <p>Bind text: {{ text }}</p>
     </body>
 </html>

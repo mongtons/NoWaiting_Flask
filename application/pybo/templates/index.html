@@ -2,16 +2,22 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<title>
-			FLASK index
-		</title>
+		{%if title%}
+			<title>{{title}}</title>
+		{%else%}
+			<title>Default</title>
+		{%endif%}
 	</head>
 	<body>
-		<h1>
-			Hello Pybo!
-		</h1>
-		<p>
-			{{main}}
-		</p>
+		<h1>Hello Pybo!</h1>
+		<h1>Hello Flask</h1>
+		<p>This page is for Flask Index page.</p>
+		<p>Bind text: {{ home_str }}</p>
+		<p>Bind list value: {{ home_list }}</p>
+		<ul>
+			{% for idx in home_list %}
+				<li>{{ idx }}</li>
+			{% endfor %}
+		</ul>
 	</body>
 </html>

@@ -9,4 +9,12 @@ def hello_pybo():
 @bp.route('/')
 def index():
     return render_template('index.html',
-                           main="Pybo project")
+                           title="Pybo project",
+                           home_str="Hello",
+                           home_list=makelist(1,11))
+
+def makelist(x1, x2):
+    lt=[]
+    for i in range(x1, x2):
+        lt.append(i)
+    return lt
