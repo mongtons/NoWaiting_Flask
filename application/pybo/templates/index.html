@@ -40,7 +40,23 @@
     <div class="container">
       <div class="starter-template">
         <h1>이용하실 빨래방을 고르세요.</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <p class="lead">
+          <table border=1>
+            <caption>등록된 빨래방 현황</caption>
+            <tr>
+              <th>업체명</th>
+              <th>위치</th>
+              <th>전화번호</th>
+            </tr>
+            {% for data in datalist %}
+            <tr>
+              <td>{{data.store_name}}</td>
+              <td>{{data.location}}</td>
+              <td>{{data.phone}}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </p>
       </div>
     </div><!-- /.container -->
  

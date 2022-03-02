@@ -6,7 +6,12 @@ bp=Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    db=models.DB()
+    sql="SELECT `store_name`, `location`, `phone` FROM store;"
+    row=db.executeAll(sql)
+    db.commit()
+    return render_template('index.html',
+                           datalist=row)
 
 @bp.route('/database', methods=['GET'])
 def database_pybo():
