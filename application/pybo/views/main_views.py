@@ -19,17 +19,21 @@ def database_pybo():
                            result=None,
                            resultData=None,
                            resultUPDATE=None)
+    
 @bp.route('/database/select', methods=['GET'])
 def select():
     db_class=models.DB()
     sql="SELECT * FROM store;"
     row=db_class.executeOne(sql)
     db_class.commit()
-    # print(row)
     return render_template('test.html',
-                           result=row,
-                           resultData=None,
+                           result=None,
+                           resultData=row,
                            resultUPDATE=None)
+    
+@bp.route('/Commuity', methods=['GET'])
+def comm():
+    return render_template('commu.html')
 
 def makelist(x1, x2):
     lt=[]
