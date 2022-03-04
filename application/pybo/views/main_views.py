@@ -31,10 +31,6 @@ def select():
                            resultData=row,
                            resultUPDATE=None)
     
-@bp.route('/Commuity', methods=['GET'])
-def comm():
-    return render_template('commu.html')
-
 def makelist(x1, x2):
     lt=[]
     for i in range(x1, x2):
