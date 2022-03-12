@@ -80,6 +80,7 @@ CREATE TABLE commuite_info(
   missing_article_processing BINARY(1) NOT NULL,
   writer VARCHAR(20) NOT NULL UNIQUE,
   store_info INT NOT NULL,
+  `date` DATETIME NOT NULL,
   PRIMARY KEY (No_Com_writing),
   INDEX `fk_Whoiswriter_idx` (writer ASC),
   INDEX `fk_WhichStore_idx` (store_info ASC),
