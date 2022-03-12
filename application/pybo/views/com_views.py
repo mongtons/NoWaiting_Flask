@@ -5,7 +5,7 @@ from pybo import models
 bp=Blueprint('Commuity', __name__, url_prefix='/Commuity')
 
 @bp.route('/', methods=['GET'])
-def comm():
+def comm_main():
     db=models.DB()
     sql="SELECT `No_Com_writing`, `title`, `writer`, `date` from commuite_info order by date desc"
     return render_template('commu.html')

@@ -40,6 +40,11 @@
     <div class="container">
       <div class="starter-template">
         <h1>이용하실 빨래방을 고르세요.</h1>
+      </div>
+      <from action="search.php">
+        <input type="text" id="search">
+        <input type="submit" value="검색">
+      </from>
         <p class="lead">
           <table border=1>
             <caption>등록된 빨래방 현황</caption>
@@ -57,13 +62,10 @@
             {% endfor %}
           </table>
         </p>
-      </div>
-    </div><!-- /.container -->
- 
- 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
+    <div id="footer">
+      <a href="https://github.com/mongtons/NoWaiting_Flask"><img src="https://img.shields.io/badge/-github-%23181717?style=plastic&logo=Github&logoColor=white"></a>
+    </div>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
   </body>

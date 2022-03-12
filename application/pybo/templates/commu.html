@@ -39,14 +39,23 @@
     </nav>
     <div class="container">
       <div class="starter-template">
-        <h1>이용하실 빨래방을 고르세요.</h1>
+        <h1>빨래방 게시판</h1>
         <p class="lead">
-        
+          {%if sqllist%}
+            <ul>
+              {% for article in sqllist %}
+                <li><a href="/Commuity/board/{{ article.No_Com_writing }}/">{{ article.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {%else%}
+            <p>게시글이 없습니다.</p>
+          {%endif%}
         </p>
       </div>
     </div><!-- /.container -->
- 
- 
+    <div id="footer">
+      
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
