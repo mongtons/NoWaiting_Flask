@@ -1,5 +1,7 @@
 from flask import Flask
-from pybo.views.main_views import bp
+from .views import main_views
+from .views import com_views
 
 app=Flask(__name__)
-app.register_blueprint(bp)
+app.register_blueprint(main_views.bp)
+app.register_blueprint(com_views.bp)
