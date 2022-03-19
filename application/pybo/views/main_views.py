@@ -5,7 +5,12 @@ from pybo import models
 bp=Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
-def index():
+def startLogin():
+    db=models.DB()
+    return render_template('login.html')
+
+@bp.route('/main', methods=['GET'])
+def mainPage():
     db=models.DB()
     sql="SELECT `store_name`, `location`, `phone` FROM store;"
     row=db.executeAll(sql)
