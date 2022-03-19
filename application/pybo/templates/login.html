@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        <meta charset="utf-8">
+        <link href="/static/css/Nowaiting_css.css" rel="stylesheet">
     </head>
     <body>
-        <form>
-            아이디 <input type="text" id="userid"><br>
-            비밀번호 <input type="password" id="pwd" minlength="8"><br>
-            <input type="radio" name="grade" value="manager">점장
-            <input type="radio" name="grade" value="customer">고객
-            <input type="submit" value="Login">
-        </from>
+        <div id="header">
+            로그인
+        </div>
+        <div class="login_box" style="margin-left: 300px">
+            <form>
+                아이디 <input type="text" id="userid"><br>
+                비밀번호 <input type="password" id="pwd" minlength="8"><br>
+                <input type="radio" name="grade" value="manager">점장
+                <input type="radio" name="grade" value="customer">고객
+                <input type="submit" value="Login">
+            </from>
+        </div>
     </body>
 </html>
